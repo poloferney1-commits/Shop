@@ -23,3 +23,25 @@ header h1 { margin: 0; font-size: 1.8rem; letter-spacing: 2px; }
     .product-card { padding: 10px; }
     header h1 { font-size: 1.4rem; }
 }
+.fuente-especial {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    /* Puedes agregar color o tamaño extra si quieres que resalte más */
+    color: #160a0a; /* Ejemplo: rojo */
+    font-size: 1.2em; 
+}
+/* Esto evita que el menú tape el título al saltar */
+html {
+    scroll-behavior: smooth; /* Hace que el salto sea suave, no de golpe */
+}
+
+.category-divider {
+    scroll-margin-top: 80px; /* Ajusta este número según el alto de tu menú */
+}
+
+/* Para que CHICAGO en el menú use tu fuente */
+.navbar-brand.fuente-especial {
+    font-family: "Jersey 25", sans-serif;
+    color: #ddd;
+}
+

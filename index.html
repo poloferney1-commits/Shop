@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | Tu Empresa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav  class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fuente-especial" href="#" style="font-size: 1.8rem; letter-spacing: 2px;">CHICAGO</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#zapatos">Zapatos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gorras">Gorras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#bolsos">Bolsos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ropa">Ropa</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     <header>
-        <h1>TU EMPRESA</h1>
-        <p>Envíos a todo el país</p>
+        <img style="width: 15%; height: auto;" src="imagen/logo.jpeg" alt="NIKE mine">
+        <h2 class="fuente-especial">SOMOS TU FLOW</h2>
     </header>
 
-    <div class="search-container">
+    <div id="Zapatos" class="category-divider" class="search-container">
         <input type="text" id="product-search" placeholder="¿Qué estás buscando?">
     </div>
 
     <main class="product-grid" id="grid">
         <div class="product-card">
-            <img src="https://www.pngarts.com/files/3/Running-Shoes-PNG-Transparent-Image.png" alt="Producto 1">
-            <h3>Nike Air Max Retro</h3>
-            <p class="price">$290.000 COP</p>
+            <img src="imagen/nikemine.jpeg" alt="NIKE mine">
+            <h3>NIKE MIND001</h3>
+            <p class="price"> $200.000 COP </p>
             <button class="buy-btn" data-product="Nike Air Max Retro" data-price="$290.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-            <img src="https://www.pngarts.com/files/3/Running-Shoes-PNG-Transparent-Image.png" alt="Producto 2">
-            <h3>Adidas Forum Low</h3>
-            <p class="price">$310.000 COP</p>
+            <img src="imagen/retro 5.jpeg" alt="Retro 5">
+            <h3>RETRO 5 “Metallic Black"</h3>
+            <p class="price">$165.000 COP</p>
             <button class="buy-btn" data-product="Adidas Forum Low" data-price="$310.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-            <img src="https://www.pngarts.com/files/3/Running-Shoes-PNG-Transparent-Image.png" alt="Producto 3">
-            <h3>Jordan 1 Mid Green</h3>
-            <p class="price">$350.000 COP</p>
+            <img src="imagen/lv skate.jpeg" alt="Producto 3">
+            <h3>LV SKATE “Swarovski”</h3>
+            <p class="price">$160.000 COP</p>
             <button class="buy-btn" data-product="Jordan 1 Mid Green" data-price="$350.000">Pedir por WhatsApp</button>
         </div>
         <div class="product-card">
-            <img src="C:\Users\Usuario\Desktop\Shop\imagen\jordan-11.jpeg" alt="Producto 3">
+            <img src="imagen/jordan-11.jpeg" alt="Producto 3">
             <h3>Jordan 11 Red</h3>
             <p class="price">$670.000 COP</p>
             <button class="buy-btn" data-product="Jordan 1 Mid Green" data-price="$350.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-    <img src="[attachment_0](attachment)" alt="Jordan Retro 5">
-    <h3>Air Jordan 5 Retro</h3>
-    <p class="price">$450.000 COP</p>
+    <img src="imagen/LVTRAINE.jpeg" alt="Jordan Retro 5">
+    <h3>LV TRAINER DIAMONTS</h3>
+    <p class="price">$220.000 COP</p>
     <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
 </div>
     </main>
