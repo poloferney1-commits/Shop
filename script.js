@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. CONFIGURACIÓN DE WHATSAPP
-    const TELEFONO = "573243317129"; // <-- Reemplaza con tu número real
+    const TELEFONO = "573023875317"; // <-- Reemplaza con tu número real
 
     const botones = document.querySelectorAll('.buy-btn');
     botones.forEach(boton => {
