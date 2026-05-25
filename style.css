@@ -45,3 +45,8 @@ html {
     color: #ddd;
 }
 
+.mapa{
+    display: flex;
+    justify-content: center;
+}
+
