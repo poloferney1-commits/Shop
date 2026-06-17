@@ -7,11 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | Tu Empresa</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .contenedor-colores {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .circulo {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            transition: transform 0.2s;
+        }
+        .circulo:hover {
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 <body>
-<nav  class="navbar navbar-expand navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand fuente-especial" href="#" style="color: blanchedalmond;"style="font-size: 1.8rem; letter-spacing: 2px;">CHICAGO</a>
+    <a class="navbar-brand fuente-especial" href="#" style="color: rgb(255, 255, 255); font-size: 1.8rem; letter-spacing: 2px;">FERSHOP</a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,7 +49,7 @@
           <a class="nav-link" style="color: blanchedalmond;" href="accesorios.html">Acesorios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: blanchedalmond;"  href="ropa.html">Ropa</a>
+          <a class="nav-link" style="color: blanchedalmond;" href="ropa.html">Ropa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" style="color: blanchedalmond;" href="mapa.html">Ubicacion</a>
@@ -43,73 +63,131 @@
         <h2 class="fuente-especial">SOMOS TU FLOW</h2>
     </header>
 
-    <div id="Zapatos" class="category-divider" class="search-container">
+    <div id="Zapatos" class="category-divider search-container">
         <input type="text" id="product-search" placeholder="¿Qué estás buscando?">
     </div>
 
     <main class="product-grid" id="grid">
-       <div class="product-card">
-            <img src="imagen/nikemine.jpeg" alt="NIKE mine">
+        <div class="product-card">
+            <img src="imagen/nikemine.jpeg" id="img-nike-mind" alt="NIKE mine">
             <h3>NIKE MIND001</h3>
             <p class="price"> $200.000 COP </p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #e0e0e0;" onclick="cambiarColor('img-nike-mind', 'imagen/nikemine.jpeg')"></span>
+                <span class="circulo" style="background-color: #000000;" onclick="cambiarColor('img-nike-mind', 'imagen/mine negras.jpeg')"></span>
+                <span class="circulo" style="background-color: #e71414;" onclick="cambiarColor('img-nike-mind', 'imagen/mine-roja.jfif')"></span>
+            </div>
+            
             <button class="buy-btn" data-product="Nike Air Max Retro" data-price="$290.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-            <img src="imagen/retro 5.jpeg" alt="Retro 5">
+            <img src="imagen/retro 5.jpeg" id="img-retro5" alt="Retro 5">
             <h3>RETRO 5 “Metallic Black"</h3>
             <p class="price">$165.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #1a1a1a;" onclick="cambiarColor('img-retro5', 'imagen/retro 5.jpeg')"></span>
+                <span class="circulo" style="background-color: #ff0000;" onclick="cambiarColor('img-retro5', 'imagen/retro5-rojo.jpeg')"></span>
+            </div>
+            
             <button class="buy-btn" data-product="Adidas Forum Low" data-price="$310.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-            <img src="imagen/lv skate.jpeg" alt="Producto 3">
+            <img src="imagen/lv skate.jpeg" id="img-lv-skate" alt="Producto 3">
             <h3>LV SKATE “Swarovski”</h3>
             <p class="price">$160.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #1c1c1c;" onclick="cambiarColor('img-lv-skate', 'imagen/lv skate.jpeg')"></span>
+                <span class="circulo" style="background-color: #ffffff;" onclick="cambiarColor('img-lv-skate', 'imagen/lv-skate-blanco.jpeg')"></span>
+            </div>
+            
             <button class="buy-btn" data-product="Jordan 1 Mid Green" data-price="$350.000">Pedir por WhatsApp</button>
         </div>
+
         <div class="product-card">
-            <img src="imagen/jordan-11.jpeg" alt="Producto 3">
+            <img src="imagen/jordan-11.jpeg" id="img-jordan11" alt="Producto 3">
             <h3>Jordan 11 Red</h3>
             <p class="price">$670.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #ba122b;" onclick="cambiarColor('img-jordan11', 'imagen/jordan-11.jpeg')"></span>
+                <span class="circulo" style="background-color: #004080;" onclick="cambiarColor('img-jordan11', 'imagen/jordan11-azul.jpeg')"></span>
+            </div>
+            
             <button class="buy-btn" data-product="Jordan 1 Mid Green" data-price="$350.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-    <img src="imagen/LVTRAINE.jpeg" alt="Jordan Retro 5">
-    <h3>LV TRAINER DIAMONTS</h3>
-    <p class="price">$220.000 COP</p>
-    <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
-</div>
-   <div class="product-card">
-    <img src="imagen/nikenocta.jpeg" alt="Jordan Retro 5">
-    <h3>NIKE nocta STEP 2</h3>
-    <p class="price">$175.000 COP</p>
-    <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
-</div>
-   <div class="product-card">
-    <img src="imagen/retro4.jpeg" alt="Jordan Retro 5">
-    <h3>RETRO 4 "Bike BLue"</h3>
-    <p class="price">$125.000 COP</p>
-    <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
-</div>
-   <div class="product-card">
-    <img src="imagen/retro1.jpeg" alt="Jordan Retro 5">
-    <h3>Retro 1 Chicago</h3>
-    <p class="price">$120.000 COP</p>
-    <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
-</div>
-<div class="product-card">
-    <img src="imagen/Retro 13.jpeg" alt="Jordan Retro 13">
-    <h3>Retro 13</h3>
-    <p class="price">$135.000 COP</p>
-    <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
-</div>
+            <img src="imagen/LVTRAINE.jpeg" id="img-lv-trainer" alt="Jordan Retro 5">
+            <h3>LV TRAINER DIAMONTS</h3>
+            <p class="price">$220.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #ffffff;" onclick="cambiarColor('img-lv-trainer', 'imagen/LVTRAINE.jpeg')"></span>
+            </div>
+            
+            <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
+        </div>
 
+        <div class="product-card">
+            <img src="imagen/nikenocta.jpeg" id="img-nocta" alt="Jordan Retro 5">
+            <h3>NIKE nocta STEP 2</h3>
+            <p class="price">$175.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #ffffff;" onclick="cambiarColor('img-nocta', 'imagen/nikenocta.jpeg')"></span>
+            </div>
+            
+            <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
+        </div>
 
-        
+        <div class="product-card">
+            <img src="imagen/retro4.jpeg" id="img-retro4" alt="Jordan Retro 5">
+            <h3>RETRO 4 "Bike BLue"</h3>
+            <p class="price">$125.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #4a90e2;" onclick="cambiarColor('img-retro4', 'imagen/retro4.jpeg')"></span>
+            </div>
+            
+            <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
+        </div>
+
+        <div class="product-card">
+            <img src="imagen/retro1.jpeg" id="img-retro1" alt="Jordan Retro 5">
+            <h3>Retro 1 Chicago</h3>
+            <p class="price">$120.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #d11919;" onclick="cambiarColor('img-retro1', 'imagen/retro1.jpeg')"></span>
+            </div>
+            
+            <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
+        </div>
+
+        <div class="product-card">
+            <img src="imagen/Retro 13.jpeg" id="img-retro13" alt="Jordan Retro 13">
+            <h3>Retro 13</h3>
+            <p class="price">$135.000 COP</p>
+            
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #333333;" onclick="cambiarColor('img-retro13', 'imagen/Retro 13.jpeg')"></span>
+            </div>
+            
+            <button class="buy-btn" data-product="Jordan Retro 5" data-price="$450.000">Pedir por WhatsApp</button>
+        </div>
     </main>
 
     <script src="script.js"></script>
+
+    <script>
+        function cambiarColor(idDelContenedorImg, rutaNuevaImagen) {
+            document.getElementById(idDelContenedorImg).src = rutaNuevaImagen;
+        }
+    </script>
 </body>
 </html>
