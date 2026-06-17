@@ -7,6 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo | Tu Empresa</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contenedor-colores {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .circulo {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            transition: transform 0.2s;
+        }
+        .circulo:hover {
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 <body>
     <nav  class="navbar navbar-expand navbar-dark bg-dark sticky-top">
@@ -49,23 +68,40 @@
 
     <main class="product-grid" id="grid">
          <div class="product-card">
-            <img src="gorras/CAP CHROME.jpeg" alt="NIKE mine">
+            <img src="gorras/CAP CHROME.jpeg" id="img-chrome" alt="NIKE mine">
             <h3>CAP CHROME</h3>
             <p class="price"> $50.000 COP </p>
+            <div class="contenedor-colores">
+            <span class="circulo" style="background-color: #ff09de;" onclick="cambiarColor('img-chrome', 'gorras/CAP CHROME.jpeg')"></span>
+            <span class="circulo" style="background-color: #000000;" onclick="cambiarColor('img-chrome', 'gorras/CRUHOMENE.jpeg')"></span>
+            <span class="circulo" style="background: linear-gradient(90deg, #ffffff 50%, #000000 50%);" onclick="cambiarColor('img-chrome', 'gorras/CHBN.jpeg')"></span>
+            </div>
             <button class="buy-btn" data-product="Nike Air Max Retro" data-price="$290.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-            <img src="gorras/CAP GODSPEED.jpeg" alt="Retro 5">
+            <img src="gorras/CAP GODSPEED.jpeg" id="img-godspeed" alt="Retro 5">
             <h3>CAP GODSPEED</h3>
             <p class="price">$165.000 COP</p>
+            <div class="contenedor-colores">
+                <span class="circulo" style="background-color: #000000;" onclick="cambiarColor('img-godspeed', 'gorras/CAP GODSPEED.jpeg')"></span>
+                <span class="circulo" style="background-color: #44b3f3;" onclick="cambiarColor('img-godspeed', 'gorras/GOSPEEDAZUL.jpeg')"></span>
+                <span class="circulo" style="background-color: #ff3030;" onclick="cambiarColor('img-godspeed', 'gorras/GODSPER.jpeg')"></span>
+                <span class="circulo" style="background-color: #32705b;" onclick="cambiarColor('img-godspeed', 'gorras/GOOSPEDVER.jpeg')"></span>
+                <span class="circulo" style="background-color: #c0c4bfda;" onclick="cambiarColor('img-godspeed', 'gorras/GOOSPEEDGREY.jpeg')"></span>
+            </div>
             <button class="buy-btn" data-product="Adidas Forum Low" data-price="$310.000">Pedir por WhatsApp</button>
         </div>
 
         <div class="product-card">
-            <img style="width: 80%; max-width: 450px; " src="gorras/CAP LOUIS VUITTON.jpeg" alt="Producto 3">
+            <img style="width: 80%; max-width: 450px; " id="img-lous" src="gorras/CAP LOUIS VUITTON.jpeg" alt="Producto 3">
             <h3>CAP LOUIS VUITTON</h3>
             <p class="price">$60.000 COP</p>
+            <div class="contenedor-colores">
+            <span class="circulo" style="background-color: #ffa3fa;" onclick="cambiarColor('img-lous', 'gorras/CAP LOUIS VUITTON.jpeg')"></span>
+            <span class="circulo" style="background-color: #8edfff;" onclick="cambiarColor('img-lous', 'gorras/lousAZ.jpeg')"></span>
+            <span class="circulo" style="background: linear-gradient(90deg, #ffffff 50%, #000000 50%);" onclick="cambiarColor('img-lous', 'gorras/LOUS.jpeg')"></span>
+            </div>
             <button class="buy-btn" data-product="Jordan 1 Mid Green" data-price="$350.000">Pedir por WhatsApp</button>
         </div>
         <div class="product-card">
@@ -78,6 +114,11 @@
     </main>
 
     <script src="script.js"></script>
+    <script>
+        function cambiarColor(idDelContenedorImg, rutaNuevaImagen) {
+            document.getElementById(idDelContenedorImg).src = rutaNuevaImagen;
+        }
+    </script>
     
 </body>
 </html>
